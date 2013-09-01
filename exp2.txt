@@ -1,0 +1,15 @@
+# a simple expression grammar that is unambiguous
+
+e -> e addop term
+e -> term
+
+term -> term multop factor
+term -> factor
+
+factor -> ( e ) 
+factor -> int
+
+addop  -> + | -
+mullop -> * | /
+
+int -> 0 | 1 | 2 | 3

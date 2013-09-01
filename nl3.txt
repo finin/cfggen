@@ -1,0 +1,19 @@
+# A simple context free grammar (CFG) for English.  Rules are like:
+# LHS -> RHS where a RHS is a sequence of alternatives separated by
+# vertical bars.  Multiple rules for a LHS symbol are OK and RHS
+# alternatives can be repeated to make them more likely.
+
+S    ->  S1 CONJ S | S1 | S1 | S1
+S1   ->  NP VP
+NP   ->  DET ADJS N PP
+PP   ->  PREP NP | | | |
+ADJS ->  ADJ ADJS | ADJ | ADJ | | | |
+VP   ->  V | V NP | V NP | V NP | V NP
+
+#  rules for pre-terminals produce words
+DET  ->  the | the | a | a | no | this | that
+N    ->  man | ball | woman | table | penguin | garden gnome | ghost | apple
+V    ->  loves | hates | hit | took | saw | liked | loved | painted | wanted 
+ADJ  ->  large | small | funny | weird | crazy | green | grotesque | creepy
+CONJ ->  and | and | and | or | or | but | while
+PREP ->  in | on | under | of | near | over | next to

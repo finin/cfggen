@@ -1,0 +1,8 @@
+# a simple expression grammar that is ambiguous
+
+e -> e op e
+e -> int
+
+op -> + | - | * | /
+
+int -> 0 | 1 | 2 | 3
