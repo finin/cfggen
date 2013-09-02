@@ -1,0 +1,4 @@
+# Here's the example grammar from hw2, question 1
+
+S -> a S a
+S -> b
